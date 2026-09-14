@@ -301,3 +301,17 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# =========================
+# Sandbox runtime (see sandbox/README.md)
+# =========================
+sandbox/node_modules/
+sandbox/data/
+
+# Generated at provision time - contains credentials, never commit
+Panel/Index/config.php
+Panel/Index/sandbox.flag
+Panel/Index/log.txt
+
+# Payload uploads captured by the panel
+Panel/Index/dlfiles/

@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.tablesorter.min.js"></script>
 	<script src="assets/js/jquery.tablesorter.widgets.min.js"></script>
 	<script>

@@ -32,7 +32,7 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
 	
-	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.tablesorter.min.js"></script>
 	<script src="assets/js/jquery.tablesorter.widgets.min.js"></script>
     <style type="text/css">
@@ -82,7 +82,7 @@
 		    <div class="form-group">
               <label for="dbusername" class="col-lg-4 control-label">Database Username</label>
               <div class="col-lg-8">
-                <input type="text" class="form-control" id="dbusername" name="dbusername" value="<?php echo $dbuser; ?>" placeholder="">
+                <input type="text" class="form-control" id="dbusername" name="dbusername" value="<?php echo isset($dbuser) ? $dbuser : ''; ?>" placeholder="">
               </div>
             </div>
 		    <div class="form-group">
@@ -94,13 +94,13 @@
 		    <div class="form-group">
               <label for="dbhost" class="col-lg-4 control-label">Database Host</label>
               <div class="col-lg-8">
-                <input type="text" class="form-control" id="dbhost" name="dbhost" value="<?php echo $dbhost; ?>" placeholder="">
+                <input type="text" class="form-control" id="dbhost" name="dbhost" value="<?php echo isset($dbhost) ? $dbhost : ''; ?>" placeholder="">
               </div>
             </div>
 		    <div class="form-group">
               <label for="dbname" class="col-lg-4 control-label">Database Name</label>
               <div class="col-lg-8">
-                <input type="text" class="form-control" id="dbname" name="dbname" value="<?php echo $dbname; ?>" placeholder="">
+                <input type="text" class="form-control" id="dbname" name="dbname" value="<?php echo isset($dbname) ? $dbname : ''; ?>" placeholder="">
               </div>
             </div>
 			<hr />

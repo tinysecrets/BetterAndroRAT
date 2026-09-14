@@ -8,7 +8,7 @@ $botid = $_GET['UID'];
   
   $result = $statement->fetch(PDO::FETCH_ASSOC);
   
-  $curblocked = $result[blocked];
+  $curblocked = $result['blocked'];
 
 
 if(isset($_GET['UID'], $_GET['Data']) AND $curblocked != 'yes'){

@@ -20,7 +20,7 @@
   
   $result = $statement->fetch(PDO::FETCH_ASSOC);
   
-  $curblocked = $result[blocked];
+  $curblocked = $result['blocked'];
   
   if($curblocked == "yes"){
     $statement = $connect->prepare("UPDATE bots SET blocked='no' WHERE `uid` = '$botid'");

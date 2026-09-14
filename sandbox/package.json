@@ -1,0 +1,20 @@
+{
+  "name": "betterandrorat-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runs the BetterAndroRAT PHP control panel locally (PHP 8.3 via WebAssembly + SQLite) for research in an isolated sandbox.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "provision": "node provision.mjs",
+    "reset": "node provision.mjs --reset"
+  },
+  "dependencies": {
+    "@php-wasm/node-8-3": "3.1.53",
+    "@php-wasm/universal": "3.1.53",
+    "jquery": "3.7.1"
+  }
+}

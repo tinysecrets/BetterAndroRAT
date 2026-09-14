@@ -23,7 +23,7 @@ if (file_exists("../config.php")) {
     <link href="../assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="../assets/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
 	
-	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="../assets/js/jquery.tablesorter.min.js"></script>
 	<script src="../assets/js/jquery.tablesorter.widgets.min.js"></script>
     <style type="text/css">

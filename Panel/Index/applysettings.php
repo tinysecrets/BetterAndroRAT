@@ -15,6 +15,9 @@ $inputdbpass = $_POST['dbpassword'];
 $inputusername = $_POST['username'];
 $inputpassword = $_POST['password'];
 
+// Keep an explicit PDO DSN (SQLite sandbox mode) if config.php defines one.
+$inputdbdns = (isset($dbdsn) && $dbdsn !== "") ? $dbdsn : "";
+
 $inputpostboxtextsize = $_POST['postboxsize'];
 
 $inputdevicestablerefreshspeed = $_POST['devicetablerefr'] * 1000;
@@ -47,6 +50,9 @@ if($f){
   $write .= '$dbname=\'' . $inputdbname . "';\n";
   $write .= '$dbuser=\'' . $inputdbuser . "';\n";
   $write .= '$dbpass=\'' . $inputdbpass . "';\n";
+  if ($inputdbdns !== "") {
+    $write .= '$dbdsn=\'' . $inputdbdns . "';\n";
+  }
   $write .= '$username=\'' . $inputusername . "';\n";
   $write .= '$password=\'' . $inputpasswordhash . "';\n";
   $write .= '$postboxtextsize=' . $inputpostboxtextsize . ";\n";

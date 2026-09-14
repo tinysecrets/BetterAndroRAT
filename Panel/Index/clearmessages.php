@@ -15,7 +15,7 @@ if (empty($_SESSION['code'])) {
 
 include("functions.php");
 
-$statement = $connect->prepare("TRUNCATE TABLE messages");
+$statement = $connect->prepare("DELETE FROM messages");
 $statement->execute();header('Location: settings.php');
 
 ?>

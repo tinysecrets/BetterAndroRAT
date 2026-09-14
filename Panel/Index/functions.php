@@ -7,8 +7,13 @@
     die();
   }
   
+  // Optional override: config.php may define $dbdsn with any PDO DSN.
+  // Upstream is MySQL-only; the sandbox uses this to run the untouched SQL
+  // against SQLite (see sandbox/README.md). Unset => original behaviour.
+  $dsn = (isset($dbdsn) && $dbdsn !== "") ? $dbdsn : "mysql:host=$dbhost;dbname=$dbname";
+
   try {
-    $connect = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+    $connect = new PDO($dsn, $dbuser, $dbpass);
   } catch (PDOException $e) {
     print "Error!: " . $e->getMessage() . "<br/>";
 	die();

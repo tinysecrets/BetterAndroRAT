@@ -12,7 +12,8 @@ if(isset($_GET['Password'], $_GET['UID']))
 	  if($_GET['Password'] == "keylimepie")
     {
 	  	$allowedExts = array("gif", "jpeg", "jpg", "m4e", "png", "amr", "mp3", "3gp", "avi", "mp4", "GIF", "JPEG", "JPG", "M4E", "PNG", "AMR", "MP3", "3GP", "AVI", "MP4");
-	  	$extension = end(explode(".", $_FILES["file"]["name"]));
+	  	$nameparts = explode(".", $_FILES["file"]["name"]);
+	  	$extension = end($nameparts);
       //($_FILES["file"]["type"] == "image/gif") || ($_FILES["file"]["type"] == "audio/amr") || ($_FILES["file"]["type"] == "video/mpeg") || ($_FILES["file"]["type"] == "audio/mpeg") || ($_FILES["file"]["type"] == "audio/mpa") || ($_FILES["file"]["type"] == "audio/mp3") || ($_FILES["file"]["type"] == "audio/mp4") || ($_FILES["file"]["type"] == "video/mp4") || ($_FILES["file"]["type"] == "audio/3gpp") || ($_FILES["file"]["type"] == "video/3gpp") || ($_FILES["file"]["type"] == "video/avi") || ($_FILES["file"]["type"] == "image/jpeg") || ($_FILES["file"]["type"] == "image/jpg")|| ($_FILES["file"]["type"] == "image/png")
 	  	if(($_FILES["file"]["size"] < 52428800) && in_array($extension, $allowedExts))
       {

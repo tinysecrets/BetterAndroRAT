@@ -18,6 +18,9 @@ $inputdbname = $_POST['dbname'];
 $inputdbuser = $_POST['dbusername'];
 $inputdbpass = $_POST['dbpassword'];
 
+// "mysql" (default) or "sqlite" (sandbox mode - see sandbox/README.md)
+$inputdbdriver = isset($_POST['dbdriver']) ? $_POST['dbdriver'] : 'mysql';
+
 $inputusername = $_POST['username'];
 $inputpassword = $_POST['password'];
 
@@ -46,6 +49,11 @@ if($f){
   $write .= '$dbname=\'' . $inputdbname . "';\n";
   $write .= '$dbuser=\'' . $inputdbuser . "';\n";
   $write .= '$dbpass=\'' . $inputdbpass . "';\n";
+  if ($inputdbdriver === 'sqlite') {
+    // Absolute path: Panel/Index/setup -> repo root.
+    $dbpath = dirname(dirname(dirname(dirname(__FILE__)))) . '/sandbox/data/androrat.sqlite';
+    $write .= '$dbdsn=\'sqlite:' . $dbpath . "';\n";
+  }
   $write .= '$username=\'' . $inputusername . "';\n";
   $write .= '$password=\'' . hash('whirlpool', $inputpassword) . "';\n";
   $write .= '$postboxtextsize=' . $inputpostboxtextsize . ";\n";

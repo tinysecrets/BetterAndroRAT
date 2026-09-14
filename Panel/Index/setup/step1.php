@@ -23,7 +23,7 @@ if (file_exists("../config.php")) {
     <link href="../assets/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="../assets/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
 	
-	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="../assets/js/jquery.tablesorter.min.js"></script>
 	<script src="../assets/js/jquery.tablesorter.widgets.min.js"></script>
     <style type="text/css">
@@ -90,6 +90,16 @@ if (file_exists("../config.php")) {
               <label for="dbname" class="col-lg-4 control-label">Database Name</label>
               <div class="col-lg-8">
                 <input type="text" class="form-control" id="dbname" name="dbname" placeholder="Database Name">
+              </div>
+            </div>
+		    <div class="form-group">
+              <label for="dbdriver" class="col-lg-4 control-label">Database Driver</label>
+              <div class="col-lg-8">
+                <select class="form-control" id="dbdriver" name="dbdriver">
+				  <option value="mysql">MySQL / MariaDB (default)</option>
+                  <option value="sqlite">SQLite (sandbox, no DB server)</option>
+				</select>
+				<p class="help-block">SQLite writes to <code>sandbox/data/androrat.sqlite</code> and is only meant for local lab use.</p>
               </div>
             </div>
 			<hr />
