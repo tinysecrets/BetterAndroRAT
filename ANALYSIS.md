@@ -4,6 +4,16 @@
 > it can be recognized, detected, and defended against. Nothing here builds,
 > configures, or deploys the tooling.
 
+## 0. At a glance
+
+![The two faces of Dendroid](figures/dendroid-overview.png)
+
+Left: what the victim sees — a forgettable black silhouette labeled
+"Adobe Flash" that opens to a blank (Invisible-themed) screen.
+Right: what the operator sees — the Dendroid panel, identified by its
+green-hexagon bugdroid-with-branches logo over a 2013-era Bootstrap UI.
+The entire design philosophy is to be unmemorable on both sides.
+
 ## 1. Family identification
 
 This repo is a repackaged copy of **Dendroid**, the Android RAT whose source
